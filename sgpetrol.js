@@ -308,8 +308,6 @@ function init() {
             response
         });
 
-        function WelcomeIntent(app) {}
-
         function PetrolPriceIntent(app) {
             let petroltype = app.getArgument('PetrolType');
             let petrolprovider = app.getArgument('PetrolProvider');
@@ -446,7 +444,6 @@ function init() {
 
 
         const actionMap = new Map();
-        actionMap.set(ACTION_WELCOME, WelcomeIntent);
         actionMap.set(ACTION_PETROLPRICE, PetrolPriceIntent);
         app.handleRequest(actionMap)
     });
